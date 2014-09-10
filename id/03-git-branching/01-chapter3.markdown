@@ -92,20 +92,20 @@ Hal ini kontras dengan cara yang dilakukan banyak VCS dalam branch, yang butuh m
 
 Mari kita lihat mengapa anda harus melakukannya.
 
-## Basic Branching and Merging ##
+## Dasar Pencabangan (Branching) dan Penggabungan (Merging) ##
 
-Let’s go through a simple example of branching and merging with a workflow that you might use in the real world. You’ll follow these steps:
+Mari kita lihat contoh sederhana dari Pencabangan dan Penggabungan dengan diagram alir yang biasa kita gunakan secara nyata. Anda akan mengikut tahapan berikut :
 
-1. Do work on a web site.
-2. Create a branch for a new story you’re working on.
-3. Do some work in that branch.
+1. Bekerja di jejaring (website).
+2. Buat pencabangan untuk hal baru yang sedang dikerjakan.
+3. Bekerja di pencabangan tersebut.
 
-At this stage, you’ll receive a call that another issue is critical and you need a hotfix. You’ll do the following:
+Pada tahap ini, anda akan menerima pesan bahwa ada masalah yang kritis dan anda perlu memperbaikinya. Anda akan melakukan tahapan berikut :
 
-1. Revert back to your production branch.
-2. Create a branch to add the hotfix.
-3. After it’s tested, merge the hotfix branch, and push to production.
-4. Switch back to your original story and continue working.
+1. Kembali ke pencabangan saat produksi.
+2. Membuat pencabangan untuk memperbaiki masalah.
+3. Setelah diuji, gabungkan pencabangan perbaikan tadi, dan tempatkan di bagian produksi.
+4. Kembali ke kasus sebelumnya dan kembali bekerja.
 
 ### Basic Branching ###
 
