@@ -146,7 +146,7 @@ Bagaimanapun, sebelum anda melakukannya, perhatikan bahwa jika dalam kandar kerj
 
 Saat ini, anda berada dalam kandar kerja dalam kondisi tepat seperti anda belum mengerjakan masalah #53, dan anda dapat konsentrasi mengerjakan perbaikannya. Hal yang perlu diingat adalah: Git mengkondisikan kandar kerja anda agar terlihat sebagaimana anda kembali ke titik pencabangan yang anda tuju. Git menambahkan, menghapus, dan mengubah berkas secara otomatis untuk memastikan bahwa anda bekerja pada pencabangan terakhir yang anda *commit*.
 
-Next, you have a hotfix to make. Let’s create a hotfix branch on which to work until it’s completed (see Figure 3-13):
+Selanjutnya, kita dapat membuat cabang *hotfix*. Mari kita buat cabang *hotfix* dalam tugas kita kali ini sampai dengan selesai (lihat Gambar 3-13):
 
 	$ git checkout -b 'hotfix'
 	Switched to a new branch "hotfix"
@@ -156,9 +156,9 @@ Next, you have a hotfix to make. Let’s create a hotfix branch on which to work
 	 1 files changed, 0 insertions(+), 1 deletions(-)
 
 Insert 18333fig0313.png 
-Figure 3-13. hotfix branch based back at your master branch point.
+Gambar 3-13. cabang *hotfix* pada titik cabang *master*.
 
-You can run your tests, make sure the hotfix is what you want, and merge it back into your master branch to deploy to production. You do this with the `git merge` command:
+Kita dapat melakukan ujicoba, memastikan apakah *hotfix* seperti yang kita inginkan, dan menggabungkannya kembali dengan cabang *master* untuk siap pada tahap produksi. Kita melakukannya dengan perintah `git merge`:
 
 	$ git checkout master
 	$ git merge hotfix
@@ -167,8 +167,9 @@ You can run your tests, make sure the hotfix is what you want, and merge it back
 	 README |    1 -
 	 1 files changed, 0 insertions(+), 1 deletions(-)
 
-You’ll notice the phrase "Fast forward" in that merge. Because the commit pointed to by the branch you merged in was directly upstream of the commit you’re on, Git moves the pointer forward. To phrase that another way, when you try to merge one commit with a commit that can be reached by following the first commit’s history, Git simplifies things by moving the pointer forward because there is no divergent work to merge together — this is called a "fast forward".
+Kita akan mendapatkan kata "Fast forward" dalam penggabungan. Karena titik *commit* yang akan digabungkan merujuk langsung ke titik *commit* hulu, Git memindahkan penunjuk ke depan. Dengan kata lain, jika kita ingin menggabungkan titik *commit* dengan titik *commit* yang dapat dicapai oleh *commit* sebelumnya, Git menyederhanakannya dengan cara memindahkan penunjuk kedepan karena disana tidak boleh ada pekerjaan yang berbeda untuk digabung bersama - ini dinamakan "fast forward".
 
+Perubahan anda kini 
 Your change is now in the snapshot of the commit pointed to by the `master` branch, and you can deploy your change (see Figure 3-14).
 
 Insert 18333fig0314.png 
